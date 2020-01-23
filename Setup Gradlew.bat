@@ -1,0 +1,2 @@
+Gradlew setupdecompworkspace idea
+pause

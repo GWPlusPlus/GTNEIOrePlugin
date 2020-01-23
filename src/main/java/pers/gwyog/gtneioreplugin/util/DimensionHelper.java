@@ -42,7 +42,8 @@ public class DimensionHelper {
                     "TheEnd",
                     "Vanilla_EndAsteroids",
                     "Twilight",
-                    "Underdark"
+                    "Underdark",
+                    "MiningWorld"
             };
 
     public static String[] DimNameDisplayed =
@@ -81,7 +82,8 @@ public class DimensionHelper {
                     "EN",//End = EN bc En = Encalus
                     "VA",
                     "TF",
-                    "DD"
+                    "DD",
+                    "Ar"
             };
 
     private static HashMap<String, List<String>> tooltipBuffer = new HashMap<>();
@@ -101,6 +103,8 @@ public class DimensionHelper {
                         s = "Deep Dark";
                     else if (s.equals("EndAsteroid"))
                         s = "Far End Asteroids";
+                    else if (s.equals("MiningWorld"))
+                        s = "Aroma World";
                     dims[j] = s;
                 }
             }

@@ -61,6 +61,8 @@ public class Oremix {
     public boolean kb;
     @CsvCustomBindByName(column = "Haumea", required = false, converter = XtoBool.class)
     public boolean ha;
+    @CsvCustomBindByName(column = "Aroma World", required = false, converter = XtoBool.class)
+    public boolean ar;
     @CsvCustomBindByName(column = "Makemake", required = false, converter = XtoBool.class)
     public boolean make;
     @CsvCustomBindByName(column = "Vega B", required = false, converter = XtoBool.class)
@@ -338,6 +340,14 @@ public class Oremix {
 
     public void setVb(boolean vb) {
         this.vb = vb;
+    }
+
+    public boolean isAroma() {
+        return ar;
+    }
+
+    public void setAroma(boolean ar) {
+        this.ar = ar;
     }
 
     public boolean isTcetie() {

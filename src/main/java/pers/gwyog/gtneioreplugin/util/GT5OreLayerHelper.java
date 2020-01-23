@@ -8,8 +8,8 @@ import java.util.List;
 
 public class GT5OreLayerHelper {
 
-    public static Integer weightPerWorld[] = new Integer[33];
-    public static Integer DimIDs[] = new Integer[33];
+    public static Integer weightPerWorld[] = new Integer[34];
+    public static Integer DimIDs[] = new Integer[34];
     public static HashMap<String, OreLayerWrapper> mapOreLayerWrapper = new HashMap<String, OreLayerWrapper>();
     public static HashMap<OreLayerWrapper, String> bufferedDims = new HashMap<>();
 
