@@ -61,8 +61,6 @@ public class Oremix {
     public boolean kb;
     @CsvCustomBindByName(column = "Haumea", required = false, converter = XtoBool.class)
     public boolean ha;
-    @CsvCustomBindByName(column = "Aroma World", required = false, converter = XtoBool.class)
-    public boolean ar;
     @CsvCustomBindByName(column = "Makemake", required = false, converter = XtoBool.class)
     public boolean make;
     @CsvCustomBindByName(column = "Vega B", required = false, converter = XtoBool.class)
@@ -97,6 +95,8 @@ public class Oremix {
     private boolean nether;
     @CsvCustomBindByName(column = "End", required = false, converter = XtoBool.class)
     private boolean end;
+    @CsvCustomBindByName(column = "Aroma World", required = false, converter = XtoBool.class)
+    private boolean aroma;
     private int miny, maxy;
 
     public Oremix() {
@@ -342,14 +342,6 @@ public class Oremix {
         this.vb = vb;
     }
 
-    public boolean isAroma() {
-        return ar;
-    }
-
-    public void setAroma(boolean ar) {
-        this.ar = ar;
-    }
-
     public boolean isTcetie() {
         return tcetie;
     }
@@ -486,6 +478,13 @@ public class Oremix {
 
     public void setEnd(boolean s) {
         this.end = s;
+    }
+    public boolean getAroma() {
+        return this.aroma;
+    }
+
+    public void setAroma(boolean s) {
+        this.aroma = s;
     }
 
     private void calculateminmax() {

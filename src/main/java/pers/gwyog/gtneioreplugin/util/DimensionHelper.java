@@ -43,7 +43,7 @@ public class DimensionHelper {
                     "Vanilla_EndAsteroids",
                     "Twilight",
                     "Underdark",
-                    "MiningWorld"
+                    "Mining_World"
             };
 
     public static String[] DimNameDisplayed =
@@ -96,15 +96,13 @@ public class DimensionHelper {
             s = s.trim();
             for (int i = 0; i < DimNameDisplayed.length; i++) {
                 if (s.equals(DimNameDisplayed[i])) {
-                    s = DimName[i].replaceAll("GalacticraftCore_", "").replaceAll("GalacticraftMars_", "").replaceAll("GalaxySpace_", "").replaceAll("Vanilla_", "Vanilla ");
+                    s = DimName[i].replaceAll("GalacticraftCore_", "").replaceAll("GalacticraftMars_", "").replaceAll("GalaxySpace_", "").replaceAll("Mining_World", "Aroma World").replaceAll("Vanilla_", "Vanilla ");
                     if (s.equals("Twilight"))
                         s = "Twilight Forrest";
                     else if (s.equals("Underdark"))
                         s = "Deep Dark";
                     else if (s.equals("EndAsteroid"))
                         s = "Far End Asteroids";
-                    else if (s.equals("MiningWorld"))
-                        s = "Aroma World";
                     dims[j] = s;
                 }
             }

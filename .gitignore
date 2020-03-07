@@ -6,7 +6,6 @@ bin/
 eclipse/
 .classpath
 .project
-libs/
 libs2/
 out/
 

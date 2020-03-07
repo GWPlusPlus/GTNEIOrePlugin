@@ -90,13 +90,13 @@ public class CSVMaker implements Runnable {
                 oremix.ph = Dims.contains("Ph");
                 oremix.pl = Dims.contains("Pl");
                 oremix.pr = Dims.contains("Pr");
-                oremix.ar = Dims.contains("Ar");
                 oremix.tcetie = Dims.contains("TE");
                 oremix.tf = Dims.contains("TF");
                 oremix.ti = Dims.contains("Ti");
                 oremix.tr = Dims.contains("Tr");
                 oremix.vb = Dims.contains("VB");
                 oremix.ve = Dims.contains("Ve");
+                oremix.setAroma(Dims.contains("Ar"));
                 oremix.setOverworld(Dims.contains("Ow"));
                 oremix.setNether(Dims.contains("Ne"));
                 oremix.setEnd(Dims.contains("EN"));
@@ -108,7 +108,7 @@ public class CSVMaker implements Runnable {
             BufferedWriter one = Files.newBufferedWriter(Paths.get(GTNEIOrePlugin.CSVnameSmall));
             ColumnPositionMappingStrategy strat = new ColumnPositionMappingStrategy();
             strat.setType(Oremix.class);
-            String[] columns = "ORENAME,mix,DENSITY,overworld,nether,end,ea,tf,mo,ma,ph,de,as,ce,eu,ga,ca,io,ve,ar,me,en,ti,mi,ob,pr,tr,pl,kb,ha,make,dd,cb,vb,bc,be,bf,tcetie".split("\\,");
+            String[] columns = "ORENAME,mix,DENSITY,overworld,nether,end,ea,aroma,tf,mo,ma,ph,de,as,ce,eu,ga,ca,io,ve,me,en,ti,mi,ob,pr,tr,pl,kb,ha,make,dd,cb,vb,bc,be,bf,tcetie".split("\\,");
             strat.setColumnMapping(columns);
             StatefulBeanToCsv<Oremix> beanToCsv = new StatefulBeanToCsvBuilder(one)
                     .withQuotechar(CSVWriter.NO_QUOTE_CHARACTER)
@@ -182,7 +182,7 @@ public class CSVMaker implements Runnable {
                 oremix.tr = Dims.contains("Tr");
                 oremix.vb = Dims.contains("VB");
                 oremix.ve = Dims.contains("Ve");
-                oremix.ar = Dims.contains("Ar");
+                oremix.setAroma(Dims.contains("Ar"));
                 oremix.setOverworld(Dims.contains("Ow"));
                 oremix.setNether(Dims.contains("Ne"));
                 oremix.setEnd(Dims.contains("EN"));
@@ -195,7 +195,7 @@ public class CSVMaker implements Runnable {
             BufferedWriter one = Files.newBufferedWriter(Paths.get(GTNEIOrePlugin.CSVname));
             ColumnPositionMappingStrategy strat = new ColumnPositionMappingStrategy();
             strat.setType(Oremix.class);
-            String[] columns = "ORENAME,PRIMARY,SECONDARY,INBETWEEN,AROUND,mix,TIER,HEIGHT,DENSITY,SIZE,WEIGHT,overworld,nether,end,ea,tf,mo,ma,ph,de,as,ce,eu,ga,ca,io,ve,ar,me,en,ti,mi,ob,pr,tr,pl,kb,ha,make,dd,cb,vb,bc,be,bf,tcetie".split("\\,");
+            String[] columns = "ORENAME,PRIMARY,SECONDARY,INBETWEEN,AROUND,mix,TIER,HEIGHT,DENSITY,SIZE,WEIGHT,overworld,nether,end,aroma,ea,tf,mo,ma,ph,de,as,ce,eu,ga,ca,io,ve,me,en,ti,mi,ob,pr,tr,pl,kb,ha,make,dd,cb,vb,bc,be,bf,tcetie".split("\\,");
             strat.setColumnMapping(columns);
             StatefulBeanToCsv<Oremix> beanToCsv = new StatefulBeanToCsvBuilder(one)
                     .withQuotechar(CSVWriter.NO_QUOTE_CHARACTER)
